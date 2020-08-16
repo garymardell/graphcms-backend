@@ -1,0 +1,30 @@
+name: graphcms
+version: 0.1.0
+
+authors:
+  - Gary Mardell <info@garymardell.co.uk>
+
+targets:
+  graphcms:
+    main: src/graphcms.cr
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+
+  granite:
+    github: amberframework/granite
+
+  pg:
+    github: will/crystal-pg
+
+  graphql:
+    github: garymardell/graphql.cr
+
+development_dependencies:
+  sentry-run:
+    github: faustinoaq/sentry-run
+
+crystal: 0.35.1
+
+license: MIT

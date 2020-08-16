@@ -1,0 +1,58 @@
+version: 2.0
+shards:
+  cron_parser:
+    git: https://github.com/kostya/cron_parser.git
+    version: 0.3.0
+
+  db:
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.9.0
+
+  exception_page:
+    git: https://github.com/crystal-loot/exception_page.git
+    version: 0.1.4
+
+  future:
+    git: https://github.com/crystal-community/future.cr.git
+    version: 0.1.0
+
+  granite:
+    git: https://github.com/amberframework/granite.git
+    version: 0.21.1
+
+  graphql:
+    git: https://github.com/garymardell/graphql.cr.git
+    version: 0.1.0+git.commit.c8fc92ffb0ca2452f0062d89e46ffd32a20f829b
+
+  kemal:
+    git: https://github.com/kemalcr/kemal.git
+    version: 0.26.1
+
+  kilt:
+    git: https://github.com/jeromegn/kilt.git
+    version: 0.4.0
+
+  pg:
+    git: https://github.com/will/crystal-pg.git
+    version: 0.21.1
+
+  promise:
+    git: https://github.com/spider-gazelle/promise.git
+    version: 2.2.1+git.commit.be4b507cf31e4c3db1824b528f9de63c690c9a76
+
+  radix:
+    git: https://github.com/luislavena/radix.git
+    version: 0.3.9
+
+  sentry:
+    git: https://github.com/samueleaton/sentry.git
+    version: 0.3.2
+
+  sentry-run:
+    git: https://github.com/faustinoaq/sentry-run.git
+    version: 0.3.0
+
+  tasker:
+    git: https://github.com/spider-gazelle/tasker.git
+    version: 2.0.1
+
