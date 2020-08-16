@@ -1,5 +1,4 @@
 require "kemal"
-require "sentry-run"
 require "gzip"
 require "flate"
 
