@@ -4,3 +4,5 @@ module Graphcms
 
   # TODO: Put your code here
 end
+
+require "./app"
