@@ -22,7 +22,7 @@ shards:
 
   graphql:
     git: https://github.com/garymardell/graphql.cr.git
-    version: 0.1.0+git.commit.3e727d7cb28c6e3eeb17ebb342a7288d00b27f80
+    version: 0.1.0+git.commit.c64687c7f01df1cd8bb86e5589341f58aeb5f2bf
 
   kemal:
     git: https://github.com/kemalcr/kemal.git

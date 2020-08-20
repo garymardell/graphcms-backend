@@ -90,7 +90,7 @@ post "/graphql" do |env|
     Graphql::Query.new(env.params.json["query"].as(String))
   )
 
-  runtime.execute.to_json
+  runtime.execute
 end
 
 Kemal.run
