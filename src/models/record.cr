@@ -23,5 +23,4 @@ class Record < Granite::Base
   has_many cells : Cell
 
   column id : Int64, primary: true
-  # column data : RecordData, converter: Granite::Converters::Json(RecordData, JSON::Any)
 end
