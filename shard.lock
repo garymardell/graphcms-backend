@@ -14,7 +14,7 @@ shards:
 
   graphql:
     git: https://github.com/garymardell/graphql.cr.git
-    version: 0.1.1+git.commit.157308f22515ee85cd4dba8719146df152814cb7
+    version: 0.1.1+git.commit.2c34317649e3addc9763ac34d8cbed95e15e8dae
 
   kemal:
     git: https://github.com/kemalcr/kemal.git

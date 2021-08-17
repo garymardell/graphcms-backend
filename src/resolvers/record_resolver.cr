@@ -14,6 +14,7 @@ module Resolvers
       @queue = [] of Q
 
       perform(load_keys)
+      resolve_unfulfilled_promises
     end
 
     abstract def perform(load_keys : Array(Q))
@@ -33,6 +34,12 @@ module Resolvers
     private def fulfill(key, value)
       promise = @cache[key]
       promise.fulfill(value)
+    end
+
+    private def resolve_unfulfilled_promises
+      @cache.values.reject(&.fulfilled?).each do |promise|
+        promise.fulfill(nil)
+      end
     end
   end
 
