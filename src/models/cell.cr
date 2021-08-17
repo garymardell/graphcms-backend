@@ -23,5 +23,4 @@ class Cell < Granite::Base
   column id : Int64, primary: true
   column name : String
   column data : String?
-  column value : CellValue, converter: Granite::Converters::Json(CellValue, JSON::Any)
 end
