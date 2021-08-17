@@ -32,6 +32,8 @@ module Resolvers
     end
 
     private def fulfill(key, value)
+      return unless @cache.has_key?(key)
+
       promise = @cache[key]
       promise.fulfill(value)
     end
