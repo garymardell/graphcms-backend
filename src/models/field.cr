@@ -7,5 +7,5 @@ class Field < Granite::Base
 
   column id : Int64, primary: true
   column name : String
-  column cell_type : String
+  # column cell_type : String
 end

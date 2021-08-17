@@ -70,18 +70,19 @@ module Generators
     end
 
     def graphql_type_for_field(field)
-      case field.cell_type
-      when "string"
-        Graphql::Type::String.new
-      when "int"
-        Graphql::Type::Int.new
-      when "float"
-        Graphql::Type::Float.new
-      when "boolean"
-        Graphql::Type::Boolean.new
-      else
-        raise "Could not get type"
-      end
+      Graphql::Type::String.new
+      # case field.cell_type
+      # when "string"
+      #   Graphql::Type::String.new
+      # when "int"
+      #   Graphql::Type::Int.new
+      # when "float"
+      #   Graphql::Type::Float.new
+      # when "boolean"
+      #   Graphql::Type::Boolean.new
+      # else
+      #   raise "Could not get type"
+      # end
     end
   end
 end
