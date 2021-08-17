@@ -47,9 +47,10 @@ module Resolvers
 
   class CellLoader < Loader(Tuple(Int64, String))
     def perform(load_keys : Array(Q))
-      record_ids = load_keys.map { |(record_id, name)| record_id }
+      record_ids = load_keys.map { |(record_id, _name)| record_id }.uniq
+      fields = load_keys.map { |(_record_id, name)| name }.uniq
 
-      cells = Cell.where(record_id: record_ids.uniq)
+      cells = Cell.where(record_id: record_ids, name: fields)
       cells.each do |cell|
         fulfill({ cell.record_id, cell.name }, cell.data)
       end
