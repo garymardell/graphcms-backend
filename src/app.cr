@@ -9,6 +9,9 @@ require "graphql"
 require "./models/**"
 require "./generators/schema_generator"
 
+# Granite::Log.level = Log::DEBUG
+Log.setup_from_env
+
 get "/" do
   "Hello!"
 end
