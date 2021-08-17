@@ -1,11 +1,13 @@
 module Resolvers
   class CellLoader
-    @@loaders = {} of Record => CellLoader
+    @@loaders = {} of Int64 => CellLoader
 
     def self.for(rec : Record)
-      @@loaders.fetch(rec) do
-        CellLoader.new(rec)
+      unless @@loaders.has_key?(rec.id)
+        @@loaders[rec.id.not_nil!] = CellLoader.new(rec)
       end
+
+      @@loaders[rec.id.not_nil!]
     end
 
     property rec : Record
