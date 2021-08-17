@@ -9,14 +9,13 @@ require "graphql"
 require "./models/**"
 require "./generators/schema_generator"
 
-# Granite::Log.level = Log::DEBUG
-Log.setup_from_env
-
 get "/" do
   "Hello!"
 end
 
 post "/graphql" do |env|
+  Log.setup_from_env
+
   schema = Generators::SchemaGenerator.new.generate
 
   runtime = Graphql::Execution::Runtime.new(
@@ -27,4 +26,5 @@ post "/graphql" do |env|
   runtime.execute
 end
 
+Log.setup_from_env
 Kemal.run
