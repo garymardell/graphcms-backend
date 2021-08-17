@@ -14,7 +14,7 @@ module Resolvers
     def initialize(rec : Record)
       @rec = rec
       @fields = [] of String
-      @cache = {} of String => Graphql::Lazy(JSON::Any)
+      @cache = {} of String => Graphql::Lazy(String | Nil)
     end
 
     def resolve
@@ -29,7 +29,7 @@ module Resolvers
     def perform(load_keys : Array(String))
       cells = Cell.where(record_id: rec.id, name: load_keys)
       cells.each do |cell|
-        fulfill(cell.name, cell.value.raw)
+        fulfill(cell.name, cell.data)
       end
     end
 
@@ -40,7 +40,7 @@ module Resolvers
     def load(field : String)
       fields << field
 
-      @cache[field] ||= Graphql::Lazy(JSON::Any).new {
+      @cache[field] ||= Graphql::Lazy(String | Nil).new {
         resolve
       }
     end
