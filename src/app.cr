@@ -1,6 +1,6 @@
 require "kemal"
-require "gzip"
-require "flate"
+# require "gzip"
+# require "flate"
 
 require "../config/database.cr"
 

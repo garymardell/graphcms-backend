@@ -1,48 +1,40 @@
 version: 2.0
 shards:
-  cron_parser:
-    git: https://github.com/kostya/cron_parser.git
-    version: 0.3.0
-
   db:
     git: https://github.com/crystal-lang/crystal-db.git
-    version: 0.9.0
+    version: 0.10.1
 
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git
-    version: 0.1.4
-
-  future:
-    git: https://github.com/crystal-community/future.cr.git
-    version: 0.1.0
+    version: 0.1.5
 
   granite:
     git: https://github.com/amberframework/granite.git
-    version: 0.21.1
+    version: 0.23.0
 
   graphql:
     git: https://github.com/garymardell/graphql.cr.git
-    version: 0.1.0+git.commit.c95711ef5ac22c8e8d8facedee9366c7ac14b37c
+    version: 0.1.1+git.commit.157308f22515ee85cd4dba8719146df152814cb7
 
   kemal:
     git: https://github.com/kemalcr/kemal.git
-    version: 0.26.1
+    version: 1.0.0
 
   kilt:
     git: https://github.com/jeromegn/kilt.git
-    version: 0.4.0
+    version: 0.4.1
 
   pg:
     git: https://github.com/will/crystal-pg.git
-    version: 0.21.1
+    version: 0.24.0
 
   promise:
     git: https://github.com/spider-gazelle/promise.git
-    version: 2.2.1+git.commit.be4b507cf31e4c3db1824b528f9de63c690c9a76
+    version: 2.2.3+git.commit.271f146b31a3e41a35892c5a840b9bf6e450ad9e
 
   radix:
     git: https://github.com/luislavena/radix.git
-    version: 0.3.9
+    version: 0.4.1
 
   sentry:
     git: https://github.com/samueleaton/sentry.git
@@ -51,8 +43,4 @@ shards:
   sentry-run:
     git: https://github.com/faustinoaq/sentry-run.git
     version: 0.3.0
-
-  tasker:
-    git: https://github.com/spider-gazelle/tasker.git
-    version: 2.0.1
 
